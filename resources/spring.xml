@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+">
+	<!-- 引入属性文件 -->
+	<context:property-placeholder location="classpath:/config/config.properties" />
+
+	<bean id="adminServlet" class="com.skl.ipc.servlet.AdminServlet" />
+	<bean id="ipcServlet" class="com.skl.ipc.servlet.IPCServlet" />
+	
+	<bean id="encodeFilter" class="com.skl.ipc.filter.EncodeFilter" />
+	
+
+	<bean id="jettyServer" class="com.skl.ipc.JettyServer">
+		<property name="port" value="${server.port}" />
+		<property name="contextPath" value="/" />
+		<property name="filters">
+			<map>
+				<entry key="/*"  value-ref="encodeFilter"/>
+			</map>
+		</property>		
+		<property name="servlets">
+			<map>
+				<entry key="/ipc/*" value-ref="ipcServlet" />		
+				<entry key="/admin" value-ref="adminServlet" />
+			</map>
+		</property>
+	</bean>
+</beans>

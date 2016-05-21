@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<responses>
+    <response method="GET" uri="/Custom/Music">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;musicPlayStatus version="1.0" xmlns="urn:sky-light"&gt;
+	&lt;status&gt;Play&lt;/status&gt;
+	&lt;delay&gt;11000&lt;/delay&gt;
+	&lt;totalTime&gt;3600000&lt;/totalTime&gt;
+	&lt;musicFileList&gt;
+		&lt;musicFile&gt;
+			&lt;id&gt;13&lt;/id&gt;
+			&lt;filename&gt;yinyue3.mp3&lt;/filename&gt;
+			&lt;length&gt;300&lt;/length&gt;
+			&lt;location&gt;500&lt;/location&gt;
+			&lt;displayName/&gt;
+			&lt;fileSize/&gt;
+			&lt;fileurl&gt;http://localhost:8080/map3&lt;/fileurl&gt;
+		&lt;/musicFile&gt;
+	&lt;/musicFileList&gt;
+	&lt;ResponseStatus&gt;
+		&lt;statusCode&gt;0&lt;/statusCode&gt;
+		&lt;statusString&gt;0&lt;/statusString&gt;
+	&lt;/ResponseStatus&gt;
+&lt;/musicPlayStatus&gt;
+</response>
+    <response method="PUT" uri="/Custom/Music">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="DELETE" uri="/Custom/Music/{musicId}">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="POST" uri="/Custom/Music/{musicId}">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="PUT" uri="/Custom/Music/{musicId}">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="GET" uri="/Custom/fmlExt/Event/Triggers/MotionDetection">&lt;EventTrigger version="1.0" xmlns="urn:psialliance-org"&gt;
+    &lt;id&gt;MotionDetection&lt;/id&gt;
+    &lt;eventType&gt;analytics&lt;/eventType&gt;
+    &lt;MotionDetectionList&gt;
+       &lt;MotionDetection&gt;
+        &lt;id&gt;MotionDetection&lt;/id&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+       &lt;/MotionDetection&gt;
+    &lt;/MotionDetectionList&gt;
+&lt;/EventTrigger&gt;</response>
+    <response method="PUT" uri="/Custom/fmlExt/Event/Triggers/MotionDetection">&lt;ResponseStatus&gt;
+    &lt;statusCode&gt;0&lt;/statusCode&gt;
+    &lt;statusString&gt;OK&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="GET" uri="/Custom/fmlExt/Event/Triggers/SoundDetection">&lt;EventTrigger version="1.0" xmlns="urn:psialliance-org"&gt;
+    &lt;id&gt;MotionDetection&lt;/id&gt;
+    &lt;eventType&gt;analytics&lt;/eventType&gt;
+    &lt;SoundDetectionList&gt;
+       &lt;SoundDetection&gt;
+        &lt;id&gt;SoundDetection&lt;/id&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+       &lt;/SoundDetection&gt;
+    &lt;/SoundDetectionList&gt;
+&lt;/EventTrigger&gt;</response>
+    <response method="PUT" uri="/Custom/fmlExt/Event/Triggers/SoundDetection">&lt;ResponseStatus&gt;
+    &lt;statusCode&gt;0&lt;/statusCode&gt;
+    &lt;statusString&gt;OK&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="GET" uri="/Custom/fmlExt/Schedule">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;EventScheduleList version="1.0" xmlns="urn:psialliance-org"&gt;
+	&lt;EventSchedule&gt;
+		&lt;id&gt;alarm_111&lt;/id&gt;
+		&lt;type&gt;medicationReminder&lt;/type&gt;
+		&lt;status&gt;enable&lt;/status&gt;
+		&lt;TimeBlockList&gt;
+			&lt;TimeBlock&gt;
+				&lt;dayOfWeek&gt;0&lt;/dayOfWeek&gt;
+				&lt;TimeRange&gt;
+					&lt;beginTime&gt;21:46:00Z&lt;/beginTime&gt;
+					&lt;endTime&gt;09:25:01Z&lt;/endTime&gt;
+				&lt;/TimeRange&gt;
+			&lt;/TimeBlock&gt;
+		&lt;/TimeBlockList&gt;
+		&lt;extensions&gt;
+			&lt;action_parameter&gt;
+				&lt;type&gt;play_music&lt;/type&gt;
+				&lt;play_music&gt;
+					&lt;playlist&gt;
+						&lt;play&gt;
+							&lt;filetype&gt;mp3&lt;/filetype&gt;
+							&lt;filename&gt;alarm1.g711&lt;/filename&gt;
+							&lt;displayname&gt;IPCalarm&lt;/displayname&gt;
+							&lt;fileUrl&gt;http://cloud.skli.biz:8888/skl-developer/test1/alarm2.g711&lt;/fileUrl&gt;
+							&lt;fileSize&gt;500&lt;/fileSize&gt;
+							&lt;length&gt;355&lt;/length&gt;
+							&lt;location&gt;0&lt;/location&gt;
+						&lt;/play&gt;
+					&lt;/playlist&gt;
+				&lt;/play_music&gt;
+			&lt;/action_parameter&gt;
+		&lt;/extensions&gt;
+	&lt;/EventSchedule&gt;
+	&lt;EventSchedule&gt;
+		&lt;id&gt;alarm_110&lt;/id&gt;
+		&lt;type&gt;medicationReminder&lt;/type&gt;
+		&lt;status&gt;disable&lt;/status&gt;
+		&lt;TimeBlockList&gt;
+			&lt;TimeBlock&gt;
+				&lt;dayOfWeek&gt;1&lt;/dayOfWeek&gt;
+				&lt;TimeRange&gt;
+					&lt;beginTime&gt;21:46:00Z&lt;/beginTime&gt;
+					&lt;endTime&gt;09:23:58Z&lt;/endTime&gt;
+				&lt;/TimeRange&gt;
+			&lt;/TimeBlock&gt;
+			&lt;TimeBlock&gt;
+				&lt;dayOfWeek&gt;2&lt;/dayOfWeek&gt;
+				&lt;TimeRange&gt;
+					&lt;beginTime&gt;21:46:00Z&lt;/beginTime&gt;
+					&lt;endTime&gt;09:23:58Z&lt;/endTime&gt;
+				&lt;/TimeRange&gt;
+			&lt;/TimeBlock&gt;
+		&lt;/TimeBlockList&gt;
+		&lt;extensions&gt;
+			&lt;action_parameter&gt;
+				&lt;type&gt;play_music&lt;/type&gt;
+				&lt;play_music&gt;
+					&lt;playlist&gt;
+						&lt;play&gt;
+							&lt;filetype&gt;mp3&lt;/filetype&gt;
+							&lt;filename&gt;alarm2.g711&lt;/filename&gt;
+							&lt;displayname&gt;IPCalarm&lt;/displayname&gt;
+							&lt;fileUrl&gt;http://cloud.skli.biz:8888/skl-developer/test1/alarm2.g711&lt;/fileUrl&gt;
+							&lt;fileSize&gt;500&lt;/fileSize&gt;
+							&lt;length&gt;355&lt;/length&gt;
+							&lt;location&gt;0&lt;/location&gt;
+						&lt;/play&gt;
+					&lt;/playlist&gt;
+				&lt;/play_music&gt;
+			&lt;/action_parameter&gt;
+		&lt;/extensions&gt;
+	&lt;/EventSchedule&gt;
+	&lt;EventSchedule&gt;
+		&lt;id&gt;story_315&lt;/id&gt;
+		&lt;type&gt;storyPlayback&lt;/type&gt;
+		&lt;status&gt;enable&lt;/status&gt;
+		&lt;TimeBlockList&gt;
+			&lt;TimeBlock&gt;
+				&lt;dayOfWeek&gt;2&lt;/dayOfWeek&gt;
+				&lt;TimeRange&gt;
+					&lt;beginTime&gt;08:59:00Z&lt;/beginTime&gt;
+					&lt;endTime&gt;09:09:29Z&lt;/endTime&gt;
+				&lt;/TimeRange&gt;
+			&lt;/TimeBlock&gt;
+		&lt;/TimeBlockList&gt;
+		&lt;extensions&gt;
+			&lt;action_parameter&gt;
+				&lt;type&gt;play_music&lt;/type&gt;
+				&lt;play_music&gt;
+					&lt;playlist&gt;
+						&lt;play&gt;
+							&lt;filetype&gt;mp3&lt;/filetype&gt;
+							&lt;filename&gt;story1.g711&lt;/filename&gt;
+							&lt;displayname&gt;story423&lt;/displayname&gt;
+							&lt;fileUrl&gt;http://wechatdev.sky-light.com.hk/skycloud/static/media.g711&lt;/fileUrl&gt;
+							&lt;fileSize&gt;5646464&lt;/fileSize&gt;
+							&lt;length&gt;1313&lt;/length&gt;
+							&lt;location&gt;0&lt;/location&gt;
+						&lt;/play&gt;
+					&lt;/playlist&gt;
+				&lt;/play_music&gt;
+			&lt;/action_parameter&gt;
+		&lt;/extensions&gt;
+	&lt;/EventSchedule&gt;
+	&lt;EventSchedule&gt;
+		&lt;id&gt;story_317&lt;/id&gt;
+		&lt;type&gt;storyPlayback&lt;/type&gt;
+		&lt;status&gt;enable&lt;/status&gt;
+		&lt;DateTimeRange&gt;
+			&lt;beginDateTime&gt;2015-12-25T10:59:00Z&lt;/beginDateTime&gt;
+			&lt;endDateTime&gt;2015-12-22T09:14:29Z&lt;/endDateTime&gt;
+		&lt;/DateTimeRange&gt;
+		&lt;TimeBlockList&gt;
+			&lt;TimeBlock&gt;
+				&lt;dayOfWeek&gt;0&lt;/dayOfWeek&gt;
+				&lt;TimeRange&gt;
+					&lt;beginTime&gt;10:59:00Z&lt;/beginTime&gt;
+					&lt;endTime&gt;09:14:29Z&lt;/endTime&gt;
+				&lt;/TimeRange&gt;
+			&lt;/TimeBlock&gt;
+		&lt;/TimeBlockList&gt;
+		&lt;extensions&gt;
+			&lt;action_parameter&gt;
+				&lt;type&gt;play_music&lt;/type&gt;
+				&lt;play_music&gt;
+					&lt;playlist&gt;
+						&lt;play&gt;
+							&lt;filetype&gt;mp3&lt;/filetype&gt;
+							&lt;filename&gt;story1.g711&lt;/filename&gt;
+							&lt;displayname&gt;story423&lt;/displayname&gt;
+							&lt;fileUrl&gt;http://wechatdev.sky-light.com.hk/skycloud/static/media.g711&lt;/fileUrl&gt;
+							&lt;fileSize&gt;5646464&lt;/fileSize&gt;
+							&lt;length&gt;1313&lt;/length&gt;
+							&lt;location&gt;0&lt;/location&gt;
+						&lt;/play&gt;
+					&lt;/playlist&gt;
+				&lt;/play_music&gt;
+			&lt;/action_parameter&gt;
+		&lt;/extensions&gt;
+	&lt;/EventSchedule&gt;
+&lt;/EventScheduleList&gt;
+
+
+</response>
+    <response method="POST" uri="/Custom/fmlExt/Schedule">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="DELETE" uri="/Custom/fmlExt/Schedule/{alarmId}">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="PUT" uri="/Custom/fmlExt/Schedule/{alarmId}">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="DELETE" uri="/Custom/fmlExt/Schedule/{storyId}">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="PUT" uri="/Custom/fmlExt/Schedule/{storyId}">&lt;ResponseStatus&gt;
+	&lt;statusCode&gt;0&lt;/statusCode&gt;
+	&lt;statusString&gt;ok&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="POST" uri="/Custom/talk/play">&lt;ResponseStatus&gt;
+    &lt;statusCode&gt;0&lt;/statusCode&gt;
+    &lt;statusString&gt;OK&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="POST" uri="/Music/{musicId}">&lt;ResponseStatus&gt;
+    &lt;statusCode&gt;0&lt;/statusCode&gt;
+    &lt;statusString&gt;OK&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="POST" uri="/PSIA/Streaming/channels/{SN}/picture/upload">&lt;ResponseStatus&gt;
+    &lt;statusCode&gt;0&lt;/statusCode&gt;
+    &lt;statusString&gt;OK&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="GET" uri="/PSIA/Streaming/channels/{id}/HLS">&lt;StreamInfo  version="1.0" xmlns="urn:psialliance-org"&gt; 
+    &lt;StreamURL&gt;http://lsdife:80/234/asdf02/sdf2.play&lt;/StreamURL&gt;
+    &lt;ResponseStatus&gt;
+        &lt;statusCode&gt;0&lt;/statusCode&gt;
+        &lt;statusString&gt;OK&lt;/statusString&gt;
+    &lt;/ResponseStatus&gt;
+&lt;/StreamInfo&gt;</response>
+    <response method="GET" uri="/PSIA/System/Audio/channels/{id}">&lt;AudioChannel version="1.0" xmlns="urn:psialliance-org"&gt; 
+    &lt;id&gt;AIC3101&lt;/id&gt; 
+    &lt;enabled&gt;true&lt;/enabled&gt;     
+    &lt;audioMode&gt;listenonly&lt;/audioMode&gt;   
+    &lt;speakerEnabled&gt;true&lt;/speakerEnabled&gt; 
+    &lt;speakerVolume&gt;100&lt;/speakerVolume&gt;
+&lt;/AudioChannel&gt;</response>
+    <response method="PUT" uri="/PSIA/System/Audio/channels/{id}">&lt;ResponseStatus&gt;
+    &lt;statusCode&gt;0&lt;/statusCode&gt;
+    &lt;statusString&gt;OK&lt;/statusString&gt;
+&lt;/ResponseStatus&gt;</response>
+    <response method="GET" uri="/PSIA/System/status">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;deviceStatus version="1.0" xmlns="urn:skylight"&gt;
+	&lt;playMusic&gt;
+		&lt;id&gt;222&lt;/id&gt;
+		&lt;fileName&gt;cool.g711&lt;/fileName&gt;
+		&lt;currentTime&gt;300&lt;/currentTime&gt;
+	&lt;/playMusic&gt;
+	&lt;scheduleList&gt;
+		&lt;schedule&gt;
+			&lt;type&gt;storyPlayback&lt;/type&gt;
+			&lt;id&gt;123&lt;/id&gt;
+			&lt;fileName&gt;story.g711&lt;/fileName&gt;
+			&lt;currentTime&gt;0&lt;/currentTime&gt;
+		&lt;/schedule&gt;
+	&lt;/scheduleList&gt;
+    &lt;ResponseStatus&gt;
+        &lt;statusCode&gt;0&lt;/statusCode&gt;
+        &lt;statusString&gt;OK&lt;/statusString&gt;
+    &lt;/ResponseStatus&gt;
+&lt;/deviceStatus&gt;</response>
+</responses>

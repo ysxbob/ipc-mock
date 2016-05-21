@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<project name="ipc project" default="default">
+	<property name="ipc.build.home" value="${basedir}" />
+	
+	<target name="default" depends="init">
+		<echo message="开始构建" />
+
+		<copydir dest="${ipc.build.home}/dist/lib" src="${ipc.build.home}/lib"> </copydir>		
+		<copydir dest="${ipc.build.home}/dist/config" src="${ipc.build.home}/bin/config"> </copydir>
+		<copydir dest="${ipc.build.home}/dist/webapp" src="${ipc.build.home}/webapp"></copydir>
+		<copy todir="${ipc.build.home}/dist/" file="${ipc.build.home}/responses.xml"></copy>
+		<copy todir="${ipc.build.home}/dist/" file="${ipc.build.home}/start.bat"></copy>
+		<copy todir="${ipc.build.home}/dist/" file="${ipc.build.home}/start.sh"></copy>
+		<copy todir="${ipc.build.home}/dist/" file="${ipc.build.home}/stop.sh"></copy>
+		
+		<echo message="生成ipc.jar文件" />
+		<jar destfile="${ipc.build.home}/dist/lib/ipc.jar">
+			<fileset dir="${ipc.build.home}/bin">
+				<exclude name="config/**"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="init">
+		<echo message="初始化环境" />
+		<echo message="构建路径：${ipc.build.home}" />
+		<delete dir="${ipc.build.home}/dist/" />
+	</target>
+
+</project>
